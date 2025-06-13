@@ -1,6 +1,9 @@
 "use client";
+// Component
+import About from "@/components/About";
 import { Explore } from "@/components/Explore";
 import Hero from "@/components/Hero";
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 import LocomotiveScroll from "locomotive-scroll";
 import { useEffect } from "react";
 
@@ -22,6 +25,8 @@ const Home = () => {
       <Hero />
 
       <Explore />
+
+      <About />
       {/* temporary div */}
       <div className="h-[4000px] bg-yellow-700"></div>
     </div>
