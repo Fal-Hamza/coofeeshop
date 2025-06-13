@@ -23,7 +23,7 @@ const Hero = () => {
         {/* text */}
         <div
           data-scroll
-          data-scroll-speed="0.4"
+          data-scroll-speed="0.1"
           className="flex-1 flex flex-col text-center justify-center items-center xl:pb-12 gap-10 h-full"
         >
           <div className="flex flex-col items-center">

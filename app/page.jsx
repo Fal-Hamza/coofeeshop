@@ -7,15 +7,18 @@ import { useEffect } from "react";
 const Home = () => {
   // add LocomotiveScroll
   useEffect(() => {
-    const loadLocomotiveScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      new LocomotiveScroll();
-    };
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
 
-    loadLocomotiveScroll();
+    return () => {
+      scroll.destroy();
+    };
   }, []);
+
   return (
-    <div lassName=" h-full overflow-x-hidden">
+    <div data-scroll-container className=" h-full overflow-x-hidden">
       <Hero />
 
       <Explore />
