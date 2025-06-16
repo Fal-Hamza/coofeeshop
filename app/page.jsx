@@ -3,6 +3,7 @@
 import About from "@/components/About";
 import { Explore } from "@/components/Explore";
 import Hero from "@/components/Hero";
+import Menu from "@/components/Menu";
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 import LocomotiveScroll from "locomotive-scroll";
 import { useEffect } from "react";
@@ -27,6 +28,9 @@ const Home = () => {
       <Explore />
 
       <About />
+
+      <Menu />
+
       {/* temporary div */}
       <div className="h-[4000px] bg-yellow-700"></div>
     </div>
