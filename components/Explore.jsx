@@ -57,6 +57,7 @@ export const Explore = () => {
                 src="/assets/explore/cup.png"
                 fill
                 alt=""
+                sizes="322px"
                 className=" object-cover"
                 quality={100}
                 priority

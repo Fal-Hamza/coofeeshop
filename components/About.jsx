@@ -106,6 +106,7 @@ const About = () => {
                         src={item.imgSrc}
                         className=" object-cover"
                         fill
+                        sizes="(min-width: 1280px) 100vw"
                         quality={100}
                         priority
                         alt=""

@@ -11,6 +11,7 @@ const MenuItem = ({ imgSrc, name, description, price }) => {
           alt=""
           priority
           quality={100}
+          sizes="(min-width: 1280px) 72px, 60px"
           className=" object-cover"
         />
       </div>

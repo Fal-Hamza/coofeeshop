@@ -9,17 +9,18 @@ import Nav from "./Nav/Nav";
 const Header = () => {
   const [navActive, setNavActive] = useState(false);
   return (
-    <header className="absolute top-[48px] left-0 right-0 z-[60]">
+    <header className="absolute xl:top-[30px] md:top-[30px] top-[20px]  left-0 right-0 z-[60]">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link
             href="/"
-            className="relative w-[100px] h-[40px] z-[60] xl:w-[120px] xl:h-[40px]"
+            className="relative w-[100px] h-[40px] z-[60] xl:w-[250px] xl:h-[150px]"
           >
             <Image
-              src="/assets/logo.svg"
+              src="/assets/coffeine-corner-high-resolution-logo-transparent.png"
               fill
+              sizes="(min-width: 1280px) 250px, (min-width: 768px) 150px, 100px"
               alt=""
               className="object-contain"
             />

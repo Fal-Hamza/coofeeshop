@@ -1,38 +1,53 @@
 "use client";
-// Component
-import About from "@/components/About";
-import { Explore } from "@/components/Explore";
+
+import { useRef, useEffect } from "react";
+import "locomotive-scroll/dist/locomotive-scroll.css"; // هذا آمن استيراده هنا
+// Component;
 import Hero from "@/components/Hero";
 import Menu from "@/components/Menu";
+import Testimonials from "@/components/Testimonials";
+import { Explore } from "@/components/Explore";
+import { OpeningHours } from "@/components/OpeningHours";
+import About from "@/components/About";
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-import LocomotiveScroll from "locomotive-scroll";
-import { useEffect } from "react";
+// import LocomotiveScroll from "locomotive-scroll";
 
 const Home = () => {
+  const scrollRef = useRef(null);
   // add LocomotiveScroll
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-    });
+    let scroll;
+
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+      });
+    };
+
+    initScroll();
 
     return () => {
-      scroll.destroy();
+      if (scroll) scroll.destroy();
     };
   }, []);
 
   return (
-    <div data-scroll-container className=" h-full overflow-x-hidden">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className=" h-full overflow-x-hidden"
+    >
       <Hero />
 
       <Explore />
 
       <About />
-
+      
       <Menu />
-
-      {/* temporary div */}
-      <div className="h-[4000px] bg-yellow-700"></div>
+      <OpeningHours />
+      <Testimonials />
     </div>
   );
 };
