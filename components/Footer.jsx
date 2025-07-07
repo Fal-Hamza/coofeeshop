@@ -5,13 +5,12 @@ const links = [
   { href: "/", name: "Home" },
   { href: "/", name: "Explore" },
   { href: "/", name: "About" },
-  { href: "/", name: "Menu" },
-  { href: "/", name: "Contact" },
+  { href: "/menu", name: "Menu" },
+  { href: "/contact", name: "Contact" },
 ];
 
 // icons
 import {
-  FaYoutube,
   FaFacebookF,
   FaTwitter,
   FaInstagram,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css"; // هذا آمن استيراده هنا
 // Component;
 import Hero from "@/components/Hero";
@@ -9,13 +9,19 @@ import Testimonials from "@/components/Testimonials";
 import { Explore } from "@/components/Explore";
 import { OpeningHours } from "@/components/OpeningHours";
 import About from "@/components/About";
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// import LocomotiveScroll from "locomotive-scroll";
 
 const Home = () => {
   const scrollRef = useRef(null);
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // تأكد من تحميل جميع المكونات الفرعية
+  }, []);
+
   // add LocomotiveScroll
   useEffect(() => {
+    if (!isMounted || !scrollRef.current) return;
     let scroll;
 
     const initScroll = async () => {
@@ -44,7 +50,7 @@ const Home = () => {
       <Explore />
 
       <About />
-      
+
       <Menu />
       <OpeningHours />
       <Testimonials />

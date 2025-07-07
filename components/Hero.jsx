@@ -43,7 +43,7 @@ const Hero = () => {
           </p>
 
           <button className="btn">
-            <Link href=" /menu">Our menu</Link>
+            <Link href=" #menu">Our menu</Link>
           </button>
         </div>
       </div>

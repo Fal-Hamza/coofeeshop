@@ -4,7 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Nav from "./Nav/Nav";
+// import Nav from "./Nav/Nav";
+import dynamic from "next/dynamic";
+
+// ✅ تحميل Nav فقط على المتصفح
+const Nav = dynamic(() => import("./Nav/Nav"), { ssr: false });
 
 const Header = () => {
   const [navActive, setNavActive] = useState(false);

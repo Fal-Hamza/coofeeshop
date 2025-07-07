@@ -1,6 +1,7 @@
 import Separator from "./Separator";
 // componens
 import MenuItem from "./MenuItem";
+import Link from "next/link";
 
 const menuItems = [
   {
@@ -68,7 +69,7 @@ const menuItems = [
 const Menu = ({ styleBtn, stylePar }) => {
   return (
     <section className="pt-12 pb-16 xl:pt-16 xl:pb-36">
-      <div className="container">
+      <div id="menu" className="container">
         <div className=" flex flex-col gap-4 mb-12 xl:mb-24">
           <h2 className="h2 text-center">Drinks Menu</h2>
           <div className="mb-4">
@@ -99,7 +100,9 @@ const Menu = ({ styleBtn, stylePar }) => {
               );
             })}
           </div>
-          <button className={` btn ${styleBtn}`}>View full Menu</button>
+          <button className={` btn ${styleBtn}`}>
+            <Link href="/menu">View full Menu</Link>
+          </button>
         </div>
       </div>
     </section>
