@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="relative w-[100px] h-[40px] z-[60] xl:w-[250px] xl:h-[150px]"
+            className="relative w-[150px] h-[40px] z-[60] xl:w-[250px] xl:h-[150px]"
           >
             <Image
               src="/assets/coffeine-corner-high-resolution-logo-transparent.png"

@@ -26,13 +26,16 @@ const Footer = () => {
       <div className="container mx-auto relative z-20">
         <div className="flex flex-col items-center justify-center gap-14">
           {/* logo */}
-          <Link href="/" className=" relative w-[120px] h-[50px] mx-auto">
+          <Link
+            href="/"
+            className="relative w-[150px] h-[40px] z-[60] xl:w-[250px] xl:h-[150px]"
+          >
             <Image
-              src="/assets/logo.svg"
+              src="/assets/coffeine-corner-high-resolution-logo-transparent.png"
               fill
-              alt="logo"
-              quality={100}
-              className=" object-contain"
+              sizes="(min-width: 1280px) 250px, (min-width: 768px) 150px, 100px"
+              alt=""
+              className="object-contain"
             />
           </Link>
           {/* nav */}
@@ -80,8 +83,10 @@ const Footer = () => {
           <div className=" border-t border-white/10 text-[15px] text-white/70 font-light w-full flex items-center justify-center py-9 ">
             <p>
               &copy; copyright 2025 -{" "}
-              <span className=" text-accent font-semibold">Zenbrow</span> . All
-              right reserved
+              <span className=" text-accent font-semibold">
+                Coffeine Corner
+              </span>{" "}
+              . All right reserved
             </p>
           </div>
         </div>
